@@ -1,6 +1,8 @@
 import "./less/index.less";
 
-
+/**
+ * My Javascript file contains 13 addEventListeners. 
+ */
 
 // Mouseover
 
@@ -12,28 +14,6 @@ funBus.addEventListener("mouseover", function (event) {
 funBus.addEventListener('mouseleave', function (event) {
     event.target.style.color = "";
 })
-
-
-
-
-
-
-
-// Keydown
-
-//Select the nav-links
-// const navBar = document.querySelectorAll(".nav-links");
-
-// //Listen for the keydown event, and then change the color to purple.
-// navBar (link => {
-//   document.addEventListener("keydown", event => {
-//     if (event.key === "n") {
-//       event.target.style.color = "purple";
-//     }
-//     })
-// });
-
-
 
 
 
@@ -75,8 +55,6 @@ headerColor.addEventListener('mouseleave', function(event) {
 
 //Keydown
 
-//const letsGo = document.querySelector(".text-content h2");
-
 function colorChange (event) {
     if (event.key === 'b') {
         event.target.style.color = 'red';
@@ -103,5 +81,29 @@ document.addEventListener('keydown', (event) => {
 
 //keydown
 const topImg = document.querySelector('.intro img');
-topImg.addEventListener()
 
+function changeImg (event) {
+    if(event.key === 'd') {
+        topImg.src = 'https://www.kidgooroo.com/files/2017/12/CARTOON-BUS.png';
+    } else if (event.key === 'e') {
+        topImg.src = 'http://localhost:9000/img/fun-bus.jpg'
+    }
+}
+
+document.addEventListener('keydown', changeImg);
+
+
+
+//click
+
+const footerColor = document.querySelector('.footer');
+footerColor.addEventListener('click', function(event) {
+    event.target.style.background = 'green';
+});
+
+
+//click
+const sectionColor = document.querySelector('.text-content');
+sectionColor.addEventListener('click', function(event) {
+    event.target.style.color = 'blue';
+});
